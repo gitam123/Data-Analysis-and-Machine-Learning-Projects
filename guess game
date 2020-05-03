@@ -1,0 +1,84 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Copy of Untitled8.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "mount_file_id": "1MueLCMrhOls4tESFJyOGThSaI7834ipZ",
+      "authorship_tag": "ABX9TyMcR/aWUotAahYuioFzjMQI",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/gitam123/Data-Analysis-and-Machine-Learning-Projects/blob/master/guess%20game\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Si0JRNwoiFY3",
+        "colab_type": "code",
+        "outputId": "9b6dc21b-7d33-4ec7-f49c-79ad5de03a17",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 146
+        }
+      },
+      "source": [
+        "import random\n",
+        "n=\" \"\n",
+        "while n==\" \":\n",
+        "    try:\n",
+        "        n=int(input(\"enter the number of games to be play\"))\n",
+        "    except:\n",
+        "        print(\"enter the number\")\n",
+        "\n",
+        "for i in range(0,n):\n",
+        "    pick=random.randint(1,26)\n",
+        "    guess=\" \"\n",
+        "    l=0\n",
+        "    while guess!=pick:\n",
+        "        l=l+1\n",
+        "        try:\n",
+        "            guess=int(input(\"enter the guess number\"))\n",
+        "        except:\n",
+        "            print(\"enter the number\")\n",
+        "            continue\n",
+        "        if guess>pick:\n",
+        "            print(\"high number\")\n",
+        "        elif guess<pick:\n",
+        "            print(\"low number\")\n",
+        "        else:\n",
+        "            print(\"correct number at attempt:\",l)\n",
+        "        "
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "enter the number of games to be play2\n",
+            "enter the guess number3\n",
+            "low number\n",
+            "enter the guess number4\n",
+            "correct number at attempt: 2\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
